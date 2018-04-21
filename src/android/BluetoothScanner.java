@@ -7,6 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import com.google.zxing.client.android.CaptureActivity;
+import com.google.zxing.client.android.Intents;
 /**
  * This class echoes a string called from JavaScript.
  */
@@ -25,6 +26,7 @@ public class BluetoothScanner extends CordovaPlugin {
     private void coolMethod(String message, CallbackContext callbackContext) {
         if (message != null && message.length() > 0) {
 			 final CordovaPlugin that = this;
+			 Intent intentScan = new Intent(that.cordova.getActivity().getBaseContext(), CaptureActivity.class);
 			callbackContext.success(message);
         } else {
             callbackContext.error("Expected one non-empty string argument.");
