@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-bluetoothscanner" version="0.1.0">
+   <name>BluetoothScanner</name>
+   <js-module name="BluetoothScanner" src="www/BluetoothScanner.js">
+      <clobbers target="cordova.plugins.BluetoothScanner" />
+   </js-module>
+   <platform name="android">
+      <config-file parent="/*" target="res/xml/config.xml">
+         <feature name="BluetoothScanner">
+            <param name="android-package" value="cordova.plugin.bluetoothscanner.BluetoothScanner" />
+         </feature>
+      </config-file>
+      <config-file parent="/*" target="AndroidManifest.xml" />
+      <source-file src="src/android/BluetoothScanner.java" target-dir="src/cordova-plugin-bluetoothscanner/BluetoothScanner" />
+	 <resource-file src="aar/Rfid.AsciiProtocol-1.4.5-release.aar" target="libs/Rfid.AsciiProtocol-1.4.5-release.aar" />
+	    <framework src="src/android/BluetoothScanner.gradle" custom="true" type="gradleReference" />
+   </platform>
+   <platform name="ios">
+      <config-file parent="/*" target="config.xml">
+         <feature name="BluetoothScanner">
+            <param name="ios-package" value="BluetoothScanner" />
+         </feature>
+      </config-file>
+      <source-file src="src/ios/BluetoothScanner.m" />
+   </platform>
+</plugin>
