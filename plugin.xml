@@ -16,9 +16,14 @@
     </config-file>
     
       <source-file src="src/android/BluetoothScanner.java" target-dir="src/cordova-plugin-bluetoothscanner/BluetoothScanner" />
-	<!-- <resource-file src="aar/Rfid.AsciiProtocol-1.4.5-release.aar" target="libs/Rfid.AsciiProtocol-1.4.5-release.aar" /> -->
+	<!--  <resource-file src="src/android/Rfid.AsciiProtocol-1.4.5-release.aar" target="libs/Rfid.AsciiProtocol-1.4.5-release.aar"/>
+	 <resource-file src="aar/Rfid.AsciiProtocol-1.4.5-release.aar" target="libs/Rfid.AsciiProtocol-1.4.5-release.aar" /> 
 	    <framework src="src/android/BluetoothScanner.gradle" custom="true" type="gradleReference" />
-		<lib-file src="src/android/Rfid.AsciiProtocol-1.4.5-release.aar"/>
+		<lib-file src="src/android/Rfid.AsciiProtocol-1.4.5-release.aar"/> -->
+		
+	<framework src="src/android/barcodescanner.gradle" custom="true" type="gradleReference"/>
+    <lib-file src="src/android/barcodescanner-release-2.1.5.aar"/>
+	
    </platform>
    <platform name="ios">
       <config-file parent="/*" target="config.xml">
