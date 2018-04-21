@@ -10,7 +10,11 @@
             <param name="android-package" value="cordova.plugin.bluetoothscanner.BluetoothScanner" />
          </feature>
       </config-file>
-      <config-file parent="/*" target="AndroidManifest.xml" />
+	    <config-file target="AndroidManifest.xml" parent="/manifest">
+        <uses-permission android:name="android.permission.BLUETOOTH" />
+		<uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    </config-file>
+    
       <source-file src="src/android/BluetoothScanner.java" target-dir="src/cordova-plugin-bluetoothscanner/BluetoothScanner" />
 	<!-- <resource-file src="aar/Rfid.AsciiProtocol-1.4.5-release.aar" target="libs/Rfid.AsciiProtocol-1.4.5-release.aar" /> -->
 	    <framework src="src/android/BluetoothScanner.gradle" custom="true" type="gradleReference" />
