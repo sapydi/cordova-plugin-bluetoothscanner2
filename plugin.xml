@@ -12,7 +12,7 @@
       </config-file>
       <config-file parent="/*" target="AndroidManifest.xml" />
       <source-file src="src/android/BluetoothScanner.java" target-dir="src/cordova-plugin-bluetoothscanner/BluetoothScanner" />
-	 <resource-file src="aar/Rfid.AsciiProtocol-1.4.5-release.aar" target="libs/Rfid.AsciiProtocol-1.4.5-release.aar" />
+	<!-- <resource-file src="aar/Rfid.AsciiProtocol-1.4.5-release.aar" target="libs/Rfid.AsciiProtocol-1.4.5-release.aar" /> -->
 	    <framework src="src/android/BluetoothScanner.gradle" custom="true" type="gradleReference" />
    </platform>
    <platform name="ios">
